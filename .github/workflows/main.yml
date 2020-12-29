@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-node@master
     - run: npm install
     - run: npm run build
-    - run: tar -zcvf release.tgz dist pm2.config.json
+    - run: tar -zcvf release.tgz dist
 
     # 发布 Release
     - name: Create Release
@@ -56,4 +56,5 @@ jobs:
           cd /root/study-project/gridsome-static
           wget https://github.com/qq794877194/gridsome-work-front/releases/latest/download/release.tgz -O release.tgz
           tar -zxvf release.tgz
-          pm2 reload pm2.config.json
+          rm -f release.tgz
+          pm2 reload serve --name gridsome-static -- dist
