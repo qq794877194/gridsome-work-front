@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "gridsome-static",
+            "script": "serve",
+            "args": "dist"
+        }
+    ]
+}
