@@ -1,8 +1,6 @@
 name: Publish And Deploy Demo
 on:
-  push:
-    tags:
-    - 'v*'
+  push
 
 jobs:
   build-and-deploy:
