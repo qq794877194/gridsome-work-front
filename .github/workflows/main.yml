@@ -57,4 +57,4 @@ jobs:
           wget https://github.com/qq794877194/gridsome-work-front/releases/latest/download/release.tgz -O release.tgz
           tar -zxvf release.tgz
           rm -f release.tgz
-          pm2 reload serve --name gridsome-static -- dist
+          pm2 start serve --name gridsome-static -- dist
